@@ -161,7 +161,7 @@ export default {
       this.file = event.target.files ? event.target.files[0] : null;
       var apple = this.file;
       const reader = new FileReader();
-      const chartInstance = this.$refs.line.getCurrentChart
+      // const chartInstance = this.$refs.line.getCurrentChart
       // const chartInstance = this.$refs.line.$data.chartData.datasets[0].data[1]
       const chartDataObject = this.$refs.line.$data.chartData.datasets[0]
 
@@ -216,7 +216,7 @@ export default {
         // console.log(this.chartData.datasets);
       }
       this.chartData.datasets = chartDataObject;
-      chartInstance.updateChart();
+      // chartInstance.updateChart();
       reader.readAsBinaryString(apple);
     },
   }
