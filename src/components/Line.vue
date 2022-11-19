@@ -106,14 +106,17 @@ export default {
               { x: '30', y: 30 },
               { x: '31', y: 31 },
             ],
+
+            fill: false,
             borderColor: 'blue',
-            backgroundColor: 'blue'
+            backgroundColor: 'blue',
+            tension: 0.1
           }
         ]
       },
       chartOptions: {
-        responsive: true,
-        maintainAspectRatio: false,
+        responsive: false,
+        maintainAspectRatio: true,
         normalized: true // Chart.js is fastest if you provide data with indices that are unique sorted and consistent across datasets and provide the normalized: true option to let Chart.js know that you have done so.
       }
     }

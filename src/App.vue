@@ -132,7 +132,7 @@ import LineChart from './components/Line.vue'
 
 // Use v-calendar & v-date-picker components
 Vue.use(VCalendar, {
-  componentPrefix: 'vc'  // Use <vc-calendar /> instead of <v-calendar />
+  componentPrefix: 'vc'
 });
 
 export default {
@@ -198,10 +198,8 @@ export default {
             // console.log(value, index);
           }
           if (index < 32) {
-            // this.$refs.line.$data.chartData.datasets[index] = value[2];
-            // calDataObject.data[index] = value[2];
-            // chartDataObject.$data[index - 1] = value[2];
             this.$refs.line.$data.chartData.datasets[0].data[index].y = value[2];
+            // chartDataObject.$data[index] = value[2];
             // this.$refs.line.$data.chartData.datasets[0].data[0].y = 100;
           }
         });
@@ -221,7 +219,6 @@ export default {
     },
   }
 };
-
 </script>
 
 <style lang="scss">
